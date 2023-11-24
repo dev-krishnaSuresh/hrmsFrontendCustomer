@@ -1,4 +1,4 @@
-import React, { lazy, useState } from "react";
+import React, { lazy, useState, useEffect } from "react";
 import {
   LaptopOutlined,
   NotificationOutlined,
@@ -19,95 +19,178 @@ import {
 } from "@ant-design/icons";
 import { Layout, Menu, theme, Dropdown } from "antd";
 import HomeLogo from "../images/dezoito_tech_logo.jpg";
+import Home from "./Home";
+import Feeds from "./Feeds";
+import Todo from "./Todo/Todo";
+import Tasks from "./Todo/Tasks";
+import Review from "./Todo/Review";
+import Salary from "./Salary/Salary";
+import Payslip from "./Salary/Payslip";
+import YTDReports from "./Salary/YTDReports";
+import ITStatements from "./Salary/ITStatements";
+import ITDeclaration from "./Salary/ITDeclaration";
+import LoansandAdvances from "./Salary/LoansandAdvances";
+import Reimbursement from "./Salary/Reimbursement";
+import ProofofInvestment from "./Salary/ProofofInvestment";
+import SalaryRevision from "./Salary/SalaryRevision";
+import Leave from "./Leave/Leave";
+import Leaveapply from "./Leave/Leaveapply";
+import LeaveBalances from "./Leave/LeaveBalances";
+import LeaveCalendar from "./Leave/LeaveCalendar";
+import HolidayCalendar from "./Leave/HolidayCalendar";
+import Attendance from "./Attendance/Attendance";
+import AttendanceInfo from "./Attendance/AttendanceInfo";
+import DocumentCenter from "./DocumentCenter/Documentcenter";
+import People from "./People";
+import Helpdesk from "./Helpdesk";
+import WorkflowDelegates from "./WorkflowDelegates";
+import "./style.css";
+import { Router, useLocation, useNavigate } from "react-router";
 const { Header, Content, Footer, Sider } = Layout;
 
 const items = [
   {
     icon: React.createElement(HomeOutlined),
-    key: "1",
+    key: "home",
     label: "Home",
   },
   {
     icon: React.createElement(InfoOutlined),
-    key: "2",
+    key: "feeds",
     label: "Feeds",
   },
   {
     icon: React.createElement(ProfileOutlined),
-    key: "3",
+    key: "todo",
     label: "Todo",
     children: [
-      { key: 1, label: "Tasks" },
-      { key: 2, label: "Review" },
+      { key: "todo/tasks", label: "Tasks" },
+      { key: "todo/Review", label: "Review" },
     ],
   },
   {
     icon: React.createElement(MoneyCollectOutlined),
-    key: "4",
+    key: "salary",
     label: "Salary",
     children: [
-      { key: 1, label: "Paysilps" },
-      { key: 2, label: "YTD Reports" },
-      { key: 3, label: "IT Statements" },
-      { key: 4, label: "Loans and Advances" },
-      { key: 5, label: "Reimbursement" },
-      { key: 6, label: "Proof of Investment" },
-      { key: 7, label: "Salary Revision" },
+      { key: "salary/paysilps", label: "Paysilps" },
+      { key: "salary/ytdreports", label: "YTD Reports" },
+      { key: "salary/itstatements", label: "IT Statements" },
+      { key: "salary/itdeclaraton", label: "IT Declaration" },
+      { key: "salary/loansandadvances", label: "Loans and Advances" },
+      { key: "salary/reimbursement", label: "Reimbursement" },
+      { key: "salary/proofofinvestment", label: "Proof of Investment" },
+      { key: "salary/salaryrevision", label: "Salary Revision" },
     ],
   },
   {
     icon: React.createElement(CarOutlined),
-    key: "5",
+    key: "leave",
     label: "Leave",
     children: [
-      { key: 1, label: "Leave Apply" },
-      { key: 2, label: "Leave Balances" },
-      { key: 3, label: "Leave Calendar" },
-      { key: 4, label: "Holiday Calendar" },
+      { key: "leave/leaveapply", label: "Leave Apply" },
+      { key: "leave/leavebalances", label: "Leave Balances" },
+      { key: "leave/leavecalendar", label: "Leave Calendar" },
+      { key: "leave/holidaycalendar", label: "Holiday Calendar" },
     ],
   },
   {
     icon: React.createElement(CalendarOutlined),
-    key: "6",
+    key: "attendance",
     label: "Attendance",
-    children: [{ key: 1, label: "Attendance Info" }],
+    children: [{ key: "attendcance/attendanceinfo", label: "Attendance Info" }],
   },
   {
     icon: React.createElement(BookOutlined),
-    key: "7",
+    key: "documentcenter",
     label: "Document Center",
   },
   {
     icon: React.createElement(TeamOutlined),
-    key: "8",
+    key: "people",
     label: "People",
   },
   {
     icon: React.createElement(ToolOutlined),
-    key: "9",
+    key: "helpdesk",
     label: "Helpdesk",
   },
   {
     icon: React.createElement(InteractionOutlined),
-    key: "10",
+    key: "workflowdelegates",
     label: "Workflow Delegates",
   },
 ];
 const App = () => {
   const [loadings, setLoadings] = useState(false);
 
+  let location = useLocation();
+  const navigate = useNavigate();
+
   const enterLoading = () => {
     setLoadings(true);
   };
+
   const quickItems = [
     {
       label: "continue",
       key: "1",
     },
   ];
+
+  const contentRender = () => {
+    if (location.pathname == "/home") {
+      return <Home />;
+    } else if (location.pathname == "/feeds") {
+      return <Feeds />;
+    } else if (location.pathname == "/todo/tasks") {
+      return <Tasks />;
+    } else if (location.pathname == "/todo/Review") {
+      return <Review />;
+    } else if (location.pathname == "/salary/paysilps") {
+      return <Payslip />;
+    } else if (location.pathname == "/salary/ytdreports") {
+      return <YTDReports />;
+    } else if (location.pathname == "/salary/itstatements") {
+      return <ITStatements />;
+    } else if (location.pathname == "/salary/itdeclaraton") {
+      return <ITDeclaration />;
+    } else if (location.pathname == "/salary/loansandadvances") {
+      return <LoansandAdvances />;
+    } else if (location.pathname == "/salary/reimbursement") {
+      return <Reimbursement />;
+    } else if (location.pathname == "/salary/proofofinvestment") {
+      return <ProofofInvestment />;
+    } else if (location.pathname == "/salary/salaryrevision") {
+      return <SalaryRevision />;
+    } else if (location.pathname == "/leave/leaveapply") {
+      return <Leaveapply />;
+    } else if (location.pathname == "/leave/leavebalances") {
+      return <LeaveBalances />;
+    } else if (location.pathname == "/leave/leavecalendar") {
+      return <LeaveCalendar />;
+    } else if (location.pathname == "/leave/holidaycalendar") {
+      return <HolidayCalendar />;
+    } else if (location.pathname == "/attendcance/attendanceinfo") {
+      return <AttendanceInfo />;
+    } else if (location.pathname == "/documentcenter") {
+      return <DocumentCenter />;
+    } else if (location.pathname == "/people") {
+      return <People />;
+    } else if (location.pathname == "/helpdesk") {
+      return <Helpdesk />;
+    } else if (location.pathname == "/workflowdelegates") {
+      return <WorkflowDelegates />;
+    }
+  };
+  const onClick = (e) => {
+    navigate(`/${e.key}`);
+  };
+
   const {
     token: { colorBgContainer },
   } = theme.useToken();
+
   return (
     <Layout>
       <Header
@@ -130,6 +213,7 @@ const App = () => {
           <span>
             <img src={HomeLogo} alt="logo" srcset="" width={100} height={100} />
           </span>
+
           <div
             style={{
               display: "flex",
@@ -177,6 +261,7 @@ const App = () => {
           >
             <Menu
               mode="inline"
+              onClick={onClick}
               //   defaultSelectedKeys={["1"]}
               //   defaultOpenKeys={["sub1"]}
               style={{
@@ -191,7 +276,7 @@ const App = () => {
               minHeight: 280,
             }}
           >
-            Content
+            <div className="content">{contentRender()}</div>
           </Content>
         </Layout>
       </Content>
@@ -199,9 +284,7 @@ const App = () => {
         style={{
           textAlign: "center",
         }}
-      >
-        Ant Design ©2023 Created by Ant UED
-      </Footer>
+      ></Footer>
     </Layout>
   );
 };
