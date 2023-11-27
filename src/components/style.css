@@ -19,3 +19,84 @@
   border: 0.5px solid rgba(66, 42, 42, 0.6);
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+/* .grids {
+  background-color: gray;
+} */
+#components-grid-demo-flex-align [class~="ant-row"] {
+  background: rgba(128, 128, 128, 0.08);
+}
+
+.boxes {
+  border-radius: 10px;
+  padding: 20px;
+  border: 0.5px solid rgba(66, 42, 42, 0.6);
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.height-100 {
+  height: 100px;
+}
+
+.height-50 {
+  height: 50px;
+}
+
+.height-200 {
+  height: 200px;
+}
+.height-120 {
+  height: 120px;
+}
+
+.height-270 {
+  height: 270px;
+}
+
+.review {
+  grid-area: review;
+}
+.time {
+  grid-area: time;
+}
+.holidays {
+  grid-area: holidays;
+}
+.quickAccess {
+  grid-area: quickAccess;
+}
+.payslip {
+  grid-area: payslip;
+}
+.itDeclaration {
+  grid-area: itDeclaration;
+}
+.track {
+  grid-area: track;
+}
+.poi {
+  grid-area: poi;
+}
+
+.homeContent > div {
+}
+.homeContent {
+  display: grid;
+  grid-template-areas:
+    "review review time time holidays holidays"
+    "review review time time holidays holidays"
+    "review review payslip payslip holidays holidays"
+    "quickAccess quickAccess payslip payslip itDeclaration itDeclaration"
+    "quickAccess quickAccess payslip payslip itDeclaration itDeclaration"
+    "poi poi payslip payslip track track";
+  gap: 10px;
+}
+
+.payslipContent {
+  display: flex;
+  justify-content: space-around;
+}
+.payslipContent .earnings {
+  width: 40%;
+}
+.payslipContent .deductions {
+  width: 30%;
+}
