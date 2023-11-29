@@ -100,3 +100,46 @@
 .payslipContent .deductions {
   width: 30%;
 }
+.YTDReports {
+  display: flex;
+  justify-content: center;
+}
+.YTDContent {
+  text-align: start;
+}
+.YTDSumary {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}
+.YTDStatementbtnActive {
+  border: 1px solid gray;
+  background-color: lightblue;
+  padding: 10px;
+}
+.YTDStatementbtnInactive {
+  border: 1px solid gray;
+  padding: 10px;
+}
+.taxcalculation {
+  font-size: 14px;
+}
+.itinfo {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+  background-color: gray;
+}
+.taxcalculation {
+  min-height: 150px;
+}
+.leaveinfo {
+  display: flex;
+  justify-content: center;
+}
+.radioActive {
+  background-color: blue;
+}

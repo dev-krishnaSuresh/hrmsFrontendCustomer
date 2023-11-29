@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Space, Table, Tag } from "antd";
+import { Switch } from "antd";
+import "../style.css";
+import { Collapse } from "antd";
+const YTDReports = () => {
+  const [isButton1Active, setIsButton1Active] = useState(true);
 
-function YTDReports() {
+  const handleButtonClick = (buttonNumber) => {
+    if (buttonNumber === 1 && !isButton1Active) {
+      setIsButton1Active(true);
+    } else if (buttonNumber === 2 && isButton1Active) {
+      setIsButton1Active(false);
+    }
+  };
+
   const dataSource = [
     {
       key: "1",
@@ -19,9 +31,9 @@ function YTDReports() {
 
   const columns = [
     {
-      title: "Name",
-      dataIndex: "name",
-      key: "name",
+      title: "item",
+      dataIndex: "item",
+      key: "item",
     },
     {
       title: "Age",
@@ -35,12 +47,73 @@ function YTDReports() {
     },
   ];
 
+  const items = [
+    {
+      key: "1",
+      label: "Income",
+      children: <Table dataSource={dataSource} columns={columns} />,
+    },
+    {
+      key: "2",
+      label: "Deduction",
+      children: <Table dataSource={dataSource} columns={columns} />,
+    },
+    {
+      key: "3",
+      label: "Days",
+      children: <Table dataSource={dataSource} columns={columns} />,
+    },
+  ];
+  const onChange = (key) => {
+    console.log(key);
+  };
   return (
-    <div>
-      YTD Reports
-      <Table dataSource={dataSource} columns={columns} />;
+    <div className="YTDContent">
+      <h2> YTD Reports</h2>
+      <div className="YTDReports">
+        <button
+          onClick={() => handleButtonClick(1)}
+          // disabled={isButton1Active}
+          className={
+            isButton1Active
+              ? "YTDStatementbtnActive"
+              : "YTDStatementbtnInactive"
+          }
+        >
+          YTD Statement
+        </button>
+        <button
+          onClick={() => handleButtonClick(2)}
+          // disabled={!isButton1Active}
+          className={
+            !isButton1Active
+              ? "YTDStatementbtnActive"
+              : "YTDStatementbtnInactive"
+          }
+        >
+          PF YTD Statement
+        </button>
+      </div>
+      <div>
+        {isButton1Active ? (
+          <div>
+            <div className="YTDSumary">YTD Summary</div>
+            <Collapse
+              items={items}
+              defaultActiveKey={["1"]}
+              onChange={onChange}
+            />
+            ;
+          </div>
+        ) : (
+          <div>
+            <div className="YTDSumary">PF YTD Summary</div>
+            <Table dataSource={dataSource} columns={columns} />;
+          </div>
+        )}
+      </div>
     </div>
   );
-}
+};
 
 export default YTDReports;
