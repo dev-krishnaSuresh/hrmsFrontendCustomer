@@ -143,3 +143,28 @@
 .radioActive {
   background-color: blue;
 }
+.leavebalances {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.leaveinfo > .boxes {
+  width: 250px;
+}
+.holidays {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+.yearlyholidays > .boxes {
+  width: 250px;
+}
+.workerstimeduration {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
+}
+.timeduration > .boxes {
+  width: 200px;
+}
