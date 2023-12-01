@@ -28,7 +28,7 @@ import DocumentCenter from "./components/DocumentCenter/Documentcenter";
 import People from "./components/People";
 import Helpdesk from "./components/Helpdesk";
 import WorkflowDelegates from "./components/WorkflowDelegates";
-
+import Login from "./components/login";
 import { Redirect, Route, Switch } from "react-router";
 function App() {
   return (
@@ -39,10 +39,10 @@ function App() {
       <div>
         {/* Nav */}
         <Layout />
-
         {/* Switch */}
         <Routes>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Login} />
+          <Route path="/home" component={Home} />
           <Route path="/feeds" component={Feeds} />
           <Route path="/todo" component={Todo} />
           <Route path="/todo/tasks" component={Tasks} />

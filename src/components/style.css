@@ -168,3 +168,69 @@
 .timeduration > .boxes {
   width: 200px;
 }
+
+/* home page styles copied from hrmsfrontendcustomers */
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/assets/images/Loginpic.webp");
+  background-size: cover;
+}
+
+.leftColumn {
+  flex: 1;
+  background-color: #001529;
+  color: #ffffff;
+  background-size: cover;
+}
+
+.contentContainer {
+  padding: 30px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.quote {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.imagesContainer {
+  display: flex;
+}
+
+.rightColumn {
+  flex: 0.3;
+  background-color: transparent;
+  padding: 30px;
+  display: flex;
+  border-radius: 25px;
+  border: 1px solid gray;
+  border-color: gray;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 60vh;
+  opacity: 1;
+}
+
+.loginContainer {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.loginTitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.poweroff {
+  cursor: pointer;
+}

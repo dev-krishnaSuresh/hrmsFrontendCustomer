@@ -20,6 +20,7 @@ import {
 import { Layout, Menu, theme, Dropdown } from "antd";
 import HomeLogo from "../images/dezoito_tech_logo.jpg";
 import Home from "./Home";
+import Login from "./login";
 import Feeds from "./Feeds";
 import Todo from "./Todo/Todo";
 import Tasks from "./Todo/Tasks";
@@ -190,8 +191,12 @@ const App = () => {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
-
-  return (
+  const handlelogout = () => {
+    navigate("/");
+  };
+  return location.pathname == "/" ? (
+    <Login />
+  ) : (
     <Layout>
       <Header
         style={{
@@ -235,7 +240,7 @@ const App = () => {
             <span>
               <BellOutlined />
             </span>
-            <span>
+            <span className="poweroff" onClick={handlelogout}>
               <PoweroffOutlined />
             </span>
           </div>
