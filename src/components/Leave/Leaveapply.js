@@ -1,19 +1,32 @@
 import React, { useState } from "react";
 import { Button, Radio, Tabs } from "antd";
+import LeaveApplyTab from "./LeaveApplyTab";
 import "../style.css";
+import LeavePendingTab from "./LeavePendingTab";
+import LeaveHistory from "./LeaveHistory";
+import RestrictedHolidaystab from "./RestrictedHolidaystab";
 function Leaveapply() {
+  const [size, setSize] = useState("apply");
+
   const items = [
     {
       label: `Leave`,
       key: 1,
       // disabled: i === 28,
-      children: "Applying for Leave",
+      children:
+        size == "apply" ? (
+          <LeaveApplyTab />
+        ) : size == "pending" ? (
+          <LeavePendingTab />
+        ) : (
+          <LeaveHistory />
+        ),
     },
     {
       label: `Restricted Holidays`,
       key: 2,
       // disabled: i === 28,
-      children: "Applying for Restricted Holidays",
+      children: <RestrictedHolidaystab />,
     },
     {
       label: `Leave Cancel`,
@@ -28,19 +41,10 @@ function Leaveapply() {
       children: "Applying for Comp. Off Grant",
     },
   ];
-  const [size, setSize] = useState("apply");
   console.log("size", size);
   return (
     <div>
       Leaveapply
-      <Tabs
-        defaultActiveKey="1"
-        tabPosition={"left"}
-        style={{
-          height: 500,
-        }}
-        items={items}
-      />
       <div className="leaveinfo">
         <Radio.Group value={size} onChange={(e) => setSize(e.target.value)}>
           <Radio.Button
@@ -63,6 +67,14 @@ function Leaveapply() {
           </Radio.Button>
         </Radio.Group>
       </div>
+      <Tabs
+        defaultActiveKey="1"
+        tabPosition={"left"}
+        style={{
+          height: 500,
+        }}
+        items={items}
+      />
     </div>
   );
 }

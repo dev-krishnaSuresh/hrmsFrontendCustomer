@@ -5,6 +5,16 @@
   border-radius: 10px;
   min-height: 60vh;
 }
+.sign-in-container {
+  position: relative;
+}
+.sign-in-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 16px; /* Adjust margin as needed */
+  margin-right: 16px; /* Adjust margin as needed */
+}
 .homeContent {
   display: flex;
   justify-content: space-around;
@@ -137,6 +147,8 @@
   min-height: 150px;
 }
 .leaveinfo {
+  margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
 }

@@ -1,6 +1,7 @@
 import "./style.css";
 import React, { useState, useEffect } from "react";
 import moment from "moment";
+import { Button } from "antd";
 import { Col, Divider, Row } from "antd";
 function Home() {
   const [currentTime, setCurrentTime] = useState(
@@ -11,6 +12,10 @@ function Home() {
       <p className={`height-${props.value}`}>{props.children}</p>
     </div>
   );
+  const handleSignIn = () => {
+    // Implement your sign-in logic here
+    console.log("Sign in clicked");
+  };
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -23,12 +28,21 @@ function Home() {
     <>
       <div className="homeContent">
         <div className="review">
-          <DemoBox value={200}>Review</DemoBox>
+          <DemoBox value={100}>Review</DemoBox>
         </div>
         <div className="time">
-          <DemoBox value={100}>
-            <p> {currentTime}</p>
-          </DemoBox>
+          <div className="sign-in-container">
+            <DemoBox value={100}>
+              <p> {currentTime}</p>
+              <Button
+                type="primary"
+                onClick={handleSignIn}
+                className="sign-in-button"
+              >
+                Sign In
+              </Button>
+            </DemoBox>
+          </div>
         </div>
         <div className="holidays">
           <DemoBox value={200}>Upcoming Holidays</DemoBox>
@@ -43,7 +57,7 @@ function Home() {
           <DemoBox value={100}>IT Declaration</DemoBox>
         </div>
         <div className="track">
-          <DemoBox value={0}>Track</DemoBox>
+          <DemoBox value={200}>Track</DemoBox>
         </div>
         <div className="poi">
           <DemoBox value={80}>POI</DemoBox>
