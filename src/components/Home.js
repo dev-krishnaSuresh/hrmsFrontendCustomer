@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import moment from "moment";
 import { Button } from "antd";
 import { Col, Divider, Row } from "antd";
+import { FormOutlined } from "@ant-design/icons";
+import { Table, Typography, Space } from "antd";
+
 function Home() {
   const [currentTime, setCurrentTime] = useState(
     moment().format("DD MMM YYYY HH:mm:ss")
@@ -24,11 +27,65 @@ function Home() {
 
     return () => clearInterval(intervalId);
   }, []);
+
+  const ReviewBox = ({ value, children }) => (
+    <div>
+      <FormOutlined style={{ marginRight: 8 }} />
+      {value} {children}
+    </div>
+  );
+  const { Text } = Typography;
+  const columns = [
+    {
+      title: "Description",
+      dataIndex: "description",
+      key: "description",
+    },
+    {
+      title: "Amount",
+      dataIndex: "amount",
+      key: "amount",
+    },
+  ];
+  const data = [
+    {
+      key: "1",
+      description: "Basic Salary",
+      amount: "$5,000.00",
+    },
+    {
+      key: "2",
+      description: "Overtime Pay",
+      amount: "$500.00",
+    },
+  ];
+  const totalAmount = data.reduce(
+    (total, item) => total + parseFloat(item.amount.replace(/[^\d.]/g, "")),
+    0
+  );
+
+  const Payslip = () => {
+    console.log("1234");
+    return (
+      <div>
+        <Typography.Title level={4}>Payslip</Typography.Title>
+        <Table columns={columns} dataSource={data} pagination={false} />
+        <Space style={{ marginTop: "16px" }}>
+          <Text strong>Total:</Text>
+          <Text>${totalAmount.toFixed(2)}</Text>
+        </Space>
+      </div>
+    );
+  };
+
   return (
     <>
       <div className="homeContent">
         <div className="review">
-          <DemoBox value={100}>Review</DemoBox>
+          <DemoBox value={100}>
+            <FormOutlined />
+            Review
+          </DemoBox>
         </div>
         <div className="time">
           <div className="sign-in-container">
@@ -51,7 +108,9 @@ function Home() {
           <DemoBox value={100}>Quick Access</DemoBox>
         </div>
         <div className="payslip">
-          <DemoBox value={270}>Payslip</DemoBox>
+          <DemoBox value={270}>
+            <Payslip />
+          </DemoBox>
         </div>
         <div className="itDeclaration">
           <DemoBox value={100}>IT Declaration</DemoBox>

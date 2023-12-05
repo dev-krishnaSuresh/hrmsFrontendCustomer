@@ -5,6 +5,15 @@ import "../style.css";
 import LeavePendingTab from "./LeavePendingTab";
 import LeaveHistory from "./LeaveHistory";
 import RestrictedHolidaystab from "./RestrictedHolidaystab";
+import Restrictedholidaysapplytab from "./Restrictedholidaysapplytab";
+import Restrictedholidayspendingtab from "./Restrictedholidayspendingtab";
+import Restrictedholidayshistory from "./Restrictedholidayshistory";
+import Applyingleavecanceltab from "./Applyingleavecanceltab";
+import Pendingleavecanceltab from "./Pendingleavecanceltab";
+import Leavecancelhistorytab from "./Leavecancelhistorytab";
+import ApplyingCompofftab from "./ApplyingCompofftab";
+import CompoffPendingtab from "./CompoffPendingtab";
+import CompoffHistorytab from "./CompoffHistorytab";
 function Leaveapply() {
   const [size, setSize] = useState("apply");
 
@@ -26,19 +35,40 @@ function Leaveapply() {
       label: `Restricted Holidays`,
       key: 2,
       // disabled: i === 28,
-      children: <RestrictedHolidaystab />,
+      children:
+        size == "apply" ? (
+          <Restrictedholidaysapplytab />
+        ) : size == "pending" ? (
+          <Restrictedholidayspendingtab />
+        ) : (
+          <Restrictedholidayshistory />
+        ),
     },
     {
       label: `Leave Cancel`,
       key: 3,
       // disabled: i === 28,
-      children: "Applying for Leave Cancel",
+      children:
+        size == "apply" ? (
+          <Applyingleavecanceltab />
+        ) : size == "pending" ? (
+          <Pendingleavecanceltab />
+        ) : (
+          <Leavecancelhistorytab />
+        ),
     },
     {
       label: "Comp Off Grant",
       key: 4,
       // disabled: i === 28,
-      children: "Applying for Comp. Off Grant",
+      children:
+        size == "apply" ? (
+          <ApplyingCompofftab />
+        ) : size == "pending" ? (
+          <CompoffPendingtab />
+        ) : (
+          <CompoffHistorytab />
+        ),
     },
   ];
   console.log("size", size);

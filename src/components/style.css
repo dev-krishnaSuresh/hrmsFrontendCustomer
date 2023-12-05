@@ -167,6 +167,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.holidays > .boxes {
   width: 100%;
 }
 .yearlyholidays > .boxes {
