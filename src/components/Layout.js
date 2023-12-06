@@ -47,6 +47,7 @@ import Helpdesk from "./Helpdesk";
 import WorkflowDelegates from "./WorkflowDelegates";
 import "./style.css";
 import { Router, useLocation, useNavigate } from "react-router";
+import { Select, Space } from "antd";
 const { Header, Content, Footer, Sider } = Layout;
 
 const items = [
@@ -228,14 +229,18 @@ const App = () => {
             }}
           >
             <span>
-              <Dropdown.Button
-                icon={<DownOutlined />}
-                loading={loadings}
-                menu={{ quickItems }}
-                onClick={() => enterLoading()}
-              >
-                Quick Links
-              </Dropdown.Button>
+              <Select
+                defaultValue="quicklinks"
+                style={{
+                  width: 120,
+                }}
+                options={[
+                  {
+                    value: "quicklinks",
+                    label: "Quick Links",
+                  },
+                ]}
+              />
             </span>
             <span>
               <BellOutlined />

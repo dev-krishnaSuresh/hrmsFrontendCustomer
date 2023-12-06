@@ -176,7 +176,7 @@
 }
 .workerstimeduration {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   width: 70%;
 }
 .timeduration > .boxes {
@@ -247,4 +247,22 @@
 }
 .poweroff {
   cursor: pointer;
+}
+.leaveapplycontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 60vh;
+}
+.typeofleave {
+  width: 200px;
+}
+.leaveapplycontentdate {
+  width: 200px;
+}
+.leaverApplyContentstyle1 {
+  display: flex;
+}
+.leaverApplyContentstyle2 {
+  display: flex;
 }
