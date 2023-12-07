@@ -266,3 +266,20 @@
 .leaverApplyContentstyle2 {
   display: flex;
 }
+.itdeclare {
+  display: flex;
+}
+.LeavePendingTab {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}
+.leavehistory {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}

@@ -113,10 +113,16 @@ function Home() {
           </DemoBox>
         </div>
         <div className="itDeclaration">
-          <DemoBox value={100}>IT Declaration</DemoBox>
+          <DemoBox value={100}>
+            IT Declaration
+            <Button className="itdeclare">Declare</Button>
+          </DemoBox>
         </div>
         <div className="track">
-          <DemoBox value={200}>Track</DemoBox>
+          <DemoBox value={200}>
+            Track
+            <p>All good!You've nothing new to track.</p>
+          </DemoBox>
         </div>
         <div className="poi">
           <DemoBox value={80}>POI</DemoBox>
