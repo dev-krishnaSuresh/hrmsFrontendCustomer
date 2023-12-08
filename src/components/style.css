@@ -283,3 +283,66 @@
   background-color: lightgray;
   padding: 10px;
 }
+.Restrictedholidays {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}
+.PendingRestrictedholidays {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}
+.Restrictedholidayshistory {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}
+.LeaveCancel {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}
+.Pendingleavecanceltab {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}
+.Leavecancelhistorytab {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}
+.Compensatoryleave {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}
+.CompoffPending {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}
+.CompoffHistory {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+  background-color: lightgray;
+  padding: 10px;
+}

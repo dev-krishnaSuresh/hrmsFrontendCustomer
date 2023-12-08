@@ -1,10 +1,74 @@
 import React from "react";
+import { Collapse } from "antd";
+import { Space, Table, Tag } from "antd";
+import { DatePicker } from "antd";
+import "../style.css";
 
 function Applyingleavecanceltab() {
+  const dataSource = [
+    {
+      key: "1",
+      name: "Sick Leave",
+      Status: "Pending",
+      days: "05",
+      from: "10-12-2023",
+      to: "15-12-2023",
+    },
+    {
+      key: "2",
+      name: "Casual Leave",
+      Status: "Pending",
+      days: "05",
+      from: "10-12-2023",
+      to: "15-12-2023",
+    },
+  ];
+  const columns = [
+    {
+      title: "Type of Leave",
+      dataIndex: "name",
+      key: "name",
+    },
+    {
+      title: "Status",
+      dataIndex: "Status",
+      key: "Status",
+    },
+    {
+      title: "From",
+      dataIndex: "from",
+      key: "from",
+    },
+    {
+      title: "To",
+      dataIndex: "to",
+      key: "to",
+    },
+    {
+      title: "No of Days",
+      dataIndex: "days",
+      key: "days",
+    },
+  ];
+
+  const items = [
+    {
+      key: "1",
+      label: "Info",
+      children: <Table dataSource={dataSource} columns={columns} />,
+    },
+  ];
+  const { RangePicker } = DatePicker;
+  const onChange = (key) => {
+    console.log(key);
+  };
   return (
     <div>
-      Leave Cancel enables you to apply for cancellation of approved leave
-      applications. Please select a leave type to get started.
+      <div className=" LeaveCancel">
+        Leave Cancel enables you to apply for cancellation of approved leave
+        applications. Please select a leave type to get started.
+      </div>
+      <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
     </div>
   );
 }

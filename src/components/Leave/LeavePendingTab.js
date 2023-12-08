@@ -1,6 +1,7 @@
 import React from "react";
 import { Collapse } from "antd";
 import { Space, Table, Tag } from "antd";
+import { DatePicker } from "antd";
 import "../style.css";
 
 function LeavePendingTab() {
@@ -8,14 +9,18 @@ function LeavePendingTab() {
     {
       key: "1",
       name: "Sick Leave",
-      Status: 31,
-      address: "10 Kattabomman Street",
+      Status: "Pending",
+      days: "05",
+      from: "10-12-2023",
+      to: "15-12-2023",
     },
     {
       key: "2",
       name: "Casual Leave",
-      Status: 31,
-      address: "10 Bazzar Street",
+      Status: "Pending",
+      days: "05",
+      from: "10-12-2023",
+      to: "15-12-2023",
     },
   ];
   const columns = [
@@ -30,30 +35,30 @@ function LeavePendingTab() {
       key: "Status",
     },
     {
+      title: "From",
+      dataIndex: "from",
+      key: "from",
+    },
+    {
+      title: "To",
+      dataIndex: "to",
+      key: "to",
+    },
+    {
       title: "No of Days",
-      dataIndex: "address",
-      key: "address",
+      dataIndex: "days",
+      key: "days",
     },
   ];
 
   const items = [
     {
       key: "1",
-      label: "John",
-      children: <Table dataSource={dataSource} columns={columns} />,
-    },
-    {
-      key: "2",
-      label: "Carter",
-      children: <Table dataSource={dataSource} columns={columns} />,
-    },
-    {
-      key: "3",
-      label: "Jack",
+      label: "Info",
       children: <Table dataSource={dataSource} columns={columns} />,
     },
   ];
-
+  const { RangePicker } = DatePicker;
   const onChange = (key) => {
     console.log(key);
   };

@@ -1,59 +1,64 @@
 import React from "react";
 import { Collapse } from "antd";
 import { Space, Table, Tag } from "antd";
+import { DatePicker } from "antd";
 import "../style.css";
 
 function LeaveHistory() {
   const dataSource = [
     {
       key: "1",
-      name: "keerthi",
-      age: 30,
-      address: "10 Kattabomman Street",
+      name: "Sick Leave",
+      Status: "Pending",
+      days: "05",
+      from: "10-12-2023",
+      to: "15-12-2023",
     },
     {
       key: "2",
-      name: "logu",
-      age: 31,
-      address: "10 Bazzar Street",
+      name: "Sick Leave",
+      Status: "Pending",
+      days: "05",
+      from: "10-12-2023",
+      to: "15-12-2023",
     },
   ];
   const columns = [
     {
-      title: "Name",
+      title: "Type of Leave",
       dataIndex: "name",
       key: "name",
     },
     {
-      title: "Age",
-      dataIndex: "age",
-      key: "age",
+      title: "Status",
+      dataIndex: "Status",
+      key: "Status",
     },
     {
-      title: "Address",
-      dataIndex: "address",
-      key: "address",
+      title: "From",
+      dataIndex: "from",
+      key: "from",
+    },
+    {
+      title: "To",
+      dataIndex: "to",
+      key: "to",
+    },
+    {
+      title: "No of Days",
+      dataIndex: "days",
+      key: "days",
     },
   ];
 
   const items = [
     {
       key: "1",
-      label: "Suresh",
-      children: <Table dataSource={dataSource} columns={columns} />,
-    },
-    {
-      key: "2",
-      label: "keerthi",
-      children: <Table dataSource={dataSource} columns={columns} />,
-    },
-    {
-      key: "3",
-      label: "logu",
+      label: "Info",
       children: <Table dataSource={dataSource} columns={columns} />,
     },
   ];
-
+  const { RangePicker } = DatePicker;
   const onChange = (key) => {
     console.log(key);
   };
