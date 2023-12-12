@@ -10,7 +10,7 @@ function Payslip() {
 
   return (
     <>
-      Payslip
+      <h4>Payslip</h4>
       <div className="payslipContent">
         <div className="earnings">
           <DemoBox value={120}>Earnings</DemoBox>
@@ -19,7 +19,9 @@ function Payslip() {
         <div className="deductions">
           <DemoBox value={120}>Deductions</DemoBox>
         </div>
-        <div>Employee Details</div>
+        <div>
+          <h5>Employee Details</h5>
+        </div>
       </div>
     </>
   );

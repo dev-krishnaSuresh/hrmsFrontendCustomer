@@ -97,7 +97,9 @@ const YTDReports = () => {
       <div>
         {isButton1Active ? (
           <div>
-            <div className="YTDSumary">YTD Summary</div>
+            <div className="YTDSumary">
+              <h4>YTD Summary</h4>
+            </div>
             <Collapse
               items={items}
               defaultActiveKey={["1"]}
@@ -107,7 +109,9 @@ const YTDReports = () => {
           </div>
         ) : (
           <div>
-            <div className="YTDSumary">PF YTD Summary</div>
+            <div className="YTDSumary">
+              <h4>PF YTD Summary</h4>
+            </div>
             <Table dataSource={dataSource} columns={columns} />;
           </div>
         )}

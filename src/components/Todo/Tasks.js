@@ -1,7 +1,11 @@
 import React from "react";
 
 function Tasks() {
-  return <div>Tasks</div>;
+  return (
+    <div>
+      <h3>Tasks</h3>
+    </div>
+  );
 }
 
 export default Tasks;

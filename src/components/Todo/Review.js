@@ -48,7 +48,7 @@ function Review() {
   ];
   return (
     <div>
-      Review
+      <h3>Review</h3>
       <Tabs
         defaultActiveKey="1"
         tabPosition={"left"}

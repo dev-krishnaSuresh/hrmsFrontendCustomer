@@ -41,7 +41,7 @@ function Feeds() {
   ];
   return (
     <div>
-      Groups;
+      <h3>Groups</h3>
       <Tabs
         defaultActiveKey="1"
         tabPosition={"left"}

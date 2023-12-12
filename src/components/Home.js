@@ -84,13 +84,13 @@ function Home() {
         <div className="review">
           <DemoBox value={100}>
             <FormOutlined />
-            Review
+            <h5>Review</h5>
           </DemoBox>
         </div>
         <div className="time">
           <div className="sign-in-container">
             <DemoBox value={100}>
-              <p> {currentTime}</p>
+              <h5> {currentTime}</h5>
               <Button
                 type="primary"
                 onClick={handleSignIn}
@@ -102,10 +102,14 @@ function Home() {
           </div>
         </div>
         <div className="holidays">
-          <DemoBox value={200}>Upcoming Holidays</DemoBox>
+          <DemoBox value={200}>
+            <h5>Upcoming Holidays</h5>
+          </DemoBox>
         </div>
         <div className="quickAccess">
-          <DemoBox value={100}>Quick Access</DemoBox>
+          <DemoBox value={100}>
+            <h5>Quick Access</h5>
+          </DemoBox>
         </div>
         <div className="payslip">
           <DemoBox value={270}>
@@ -114,18 +118,20 @@ function Home() {
         </div>
         <div className="itDeclaration">
           <DemoBox value={100}>
-            IT Declaration
+            <h5>IT Declaration</h5>
             <Button className="itdeclare">Declare</Button>
           </DemoBox>
         </div>
         <div className="track">
           <DemoBox value={200}>
-            Track
+            <h5>Track</h5>
             <p>All good!You've nothing new to track.</p>
           </DemoBox>
         </div>
         <div className="poi">
-          <DemoBox value={80}>POI</DemoBox>
+          <DemoBox value={80}>
+            <h5>POI</h5>
+          </DemoBox>
         </div>
       </div>
     </>
