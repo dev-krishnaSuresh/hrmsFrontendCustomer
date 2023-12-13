@@ -19,7 +19,7 @@ function LeaveCalendar() {
 
   return (
     <div>
-      LeaveCalendar
+      <h4>LeaveCalendar</h4>
       <Calendar
         dateCellRender={dateCellRender}
         fullscreen={false} // Set to true for a full-screen calendar

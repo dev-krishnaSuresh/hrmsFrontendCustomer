@@ -1,7 +1,11 @@
 import React from "react";
 
 function ProofofInvestment() {
-  return <div>ProofofInvestment</div>;
+  return (
+    <div>
+      <h4>ProofofInvestment</h4>
+    </div>
+  );
 }
 
 export default ProofofInvestment;

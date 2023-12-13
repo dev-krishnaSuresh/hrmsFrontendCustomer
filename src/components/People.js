@@ -1,7 +1,7 @@
 import React from "react";
 
 function People() {
-  return <div>People</div>;
+  return <h4>People</h4>;
 }
 
 export default People;

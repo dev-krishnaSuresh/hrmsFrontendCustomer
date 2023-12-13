@@ -1,7 +1,7 @@
 import React from "react";
 
 function DocumentCenter() {
-  return <div>Document Center</div>;
+  return <h4>Document Center</h4>;
 }
 
 export default DocumentCenter;
