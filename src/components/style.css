@@ -187,10 +187,12 @@
 .container {
   display: flex;
   height: 100vh;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   background-image: url("/assets/images/loginimage.jpg");
-  background-size: cover;
+  background-size:contain;
+  background-repeat: no-repeat;
+
 }
 
 .leftColumn {
@@ -220,18 +222,20 @@
 }
 
 .rightColumn {
-  flex: 0.3;
-  background-color: transparent;
+  flex: 0.29;
+  background-color: white;
+  opacity: 0.8;
   padding: 30px;
   display: flex;
+  margin: 0.2%;
   border-radius: 25px;
   border: 1px solid gray;
   border-color: gray;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 60vh;
-  opacity: 1;
+  height: 90vh;
+  /* opacity: 1; */
 }
 
 .loginContainer {
