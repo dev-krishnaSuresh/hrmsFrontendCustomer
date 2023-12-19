@@ -69,7 +69,7 @@ const YTDReports = () => {
   };
   return (
     <div className="YTDContent">
-      <h2> YTD Reports</h2>
+      <h3> YTD Reports</h3>
       <div className="YTDReports">
         <button
           onClick={() => handleButtonClick(1)}
@@ -98,7 +98,7 @@ const YTDReports = () => {
         {isButton1Active ? (
           <div>
             <div className="YTDSumary">
-              <h4>YTD Summary</h4>
+              <h3>YTD Summary</h3>
             </div>
             <Collapse
               items={items}
@@ -110,7 +110,7 @@ const YTDReports = () => {
         ) : (
           <div>
             <div className="YTDSumary">
-              <h4>PF YTD Summary</h4>
+              <h3>PF YTD Summary</h3>
             </div>
             <Table dataSource={dataSource} columns={columns} />;
           </div>

@@ -54,7 +54,7 @@ function Restrictedholidayspendingtab() {
   const items = [
     {
       key: "1",
-      label: "Info",
+      label: "PendingRestrictedholidays",
       children: <Table dataSource={dataSource} columns={columns} />,
     },
   ];
@@ -64,7 +64,7 @@ function Restrictedholidayspendingtab() {
   };
   return (
     <div>
-      <div className="PendingRestrictedholidays">PendingRestrictedholidays</div>
+      {/* <div className="PendingRestrictedholidays">PendingRestrictedholidays</div> */}
       <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
     </div>
   );

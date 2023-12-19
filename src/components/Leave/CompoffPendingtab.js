@@ -54,7 +54,7 @@ function CompoffPendingtab() {
   const items = [
     {
       key: "1",
-      label: "Info",
+      label: "CompoffPending",
       children: <Table dataSource={dataSource} columns={columns} />,
     },
   ];
@@ -64,7 +64,7 @@ function CompoffPendingtab() {
   };
   return (
     <div>
-      <div className="CompoffPending">CompoffPendingtab</div>
+      {/* <div className="CompoffPending">CompoffPendingtab</div> */}
       <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
     </div>
   );

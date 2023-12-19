@@ -18,7 +18,7 @@ import {
   PoweroffOutlined,
 } from "@ant-design/icons";
 import { Layout, Menu, theme, Dropdown } from "antd";
-import HomeLogo from "../images/dezoito_tech_logo.jpg";
+import HomeLogo from "../images/home_logo.jpeg";
 import Home from "./Home";
 import Login from "./login";
 import Feeds from "./Feeds";
@@ -56,20 +56,20 @@ const items = [
     key: "home",
     label: "Home",
   },
-  {
-    icon: React.createElement(InfoOutlined),
-    key: "feeds",
-    label: "Feeds",
-  },
-  {
-    icon: React.createElement(ProfileOutlined),
-    key: "todo",
-    label: "Todo",
-    children: [
-      { key: "todo/tasks", label: "Tasks" },
-      { key: "todo/Review", label: "Review" },
-    ],
-  },
+  // {
+  //   icon: React.createElement(InfoOutlined),
+  //   key: "feeds",
+  //   label: "Feeds",
+  // },
+  // {
+  //   icon: React.createElement(ProfileOutlined),
+  //   key: "todo",
+  //   label: "Todo",
+  //   children: [
+  //     { key: "todo/tasks", label: "Tasks" },
+  //     { key: "todo/Review", label: "Review" },
+  //   ],
+  // },
   {
     icon: React.createElement(MoneyCollectOutlined),
     key: "salary",
@@ -102,26 +102,26 @@ const items = [
     label: "Attendance",
     children: [{ key: "attendcance/attendanceinfo", label: "Attendance Info" }],
   },
-  {
-    icon: React.createElement(BookOutlined),
-    key: "documentcenter",
-    label: "Document Center",
-  },
-  {
-    icon: React.createElement(TeamOutlined),
-    key: "people",
-    label: "People",
-  },
-  {
-    icon: React.createElement(ToolOutlined),
-    key: "helpdesk",
-    label: "Helpdesk",
-  },
-  {
-    icon: React.createElement(InteractionOutlined),
-    key: "workflowdelegates",
-    label: "Workflow Delegates",
-  },
+  // {
+  //   icon: React.createElement(BookOutlined),
+  //   key: "documentcenter",
+  //   label: "Document Center",
+  // },
+  // {
+  //   icon: React.createElement(TeamOutlined),
+  //   key: "people",
+  //   label: "People",
+  // },
+  // {
+  //   icon: React.createElement(ToolOutlined),
+  //   key: "helpdesk",
+  //   label: "Helpdesk",
+  // },
+  // {
+  //   icon: React.createElement(InteractionOutlined),
+  //   key: "workflowdelegates",
+  //   label: "Workflow Delegates",
+  // },
 ];
 const App = () => {
   const [loadings, setLoadings] = useState(false);
@@ -202,7 +202,7 @@ const App = () => {
       <Header
         style={{
           display: "flex",
-          backgroundColor: "#fff",
+          backgroundColor: "#000",
           alignItems: "center",
           marginTop: 10,
           height: 120,
@@ -217,18 +217,20 @@ const App = () => {
           }}
         >
           <span>
-            <img src={HomeLogo} alt="logo" srcset="" width={100} height={100} />
+            {/* <img src={HomeLogo} alt="logo" srcset="" width={100} height={100} /> */}
+            <h1 className="dezoitos">DEZOITO</h1>
           </span>
 
           <div
             style={{
               display: "flex",
               alignItems: "center",
-              width: "15%",
+              width: "5%",
               justifyContent: "space-between",
+              color: "white",
             }}
           >
-            <span>
+            {/* <span>
               <Select
                 defaultValue="quicklinks"
                 style={{
@@ -241,7 +243,7 @@ const App = () => {
                   },
                 ]}
               />
-            </span>
+            </span> */}
             <span>
               <BellOutlined />
             </span>
@@ -254,6 +256,7 @@ const App = () => {
       <Content
         style={{
           padding: "0 50px",
+          backgroundColor: "black",
         }}
       >
         <Layout
@@ -293,6 +296,7 @@ const App = () => {
       <Footer
         style={{
           textAlign: "center",
+          backgroundColor: "black",
         }}
       ></Footer>
     </Layout>

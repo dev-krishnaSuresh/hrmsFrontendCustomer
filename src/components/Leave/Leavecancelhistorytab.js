@@ -54,7 +54,7 @@ function Leavecancelhistorytab() {
   const items = [
     {
       key: "1",
-      label: "Info",
+      label: "Leavecancelhistory",
       children: <Table dataSource={dataSource} columns={columns} />,
     },
   ];
@@ -64,7 +64,7 @@ function Leavecancelhistorytab() {
   };
   return (
     <div>
-      <div className="Leavecancelhistorytab">Leavecancelhistorytab</div>
+      {/* <div className="Leavecancelhistorytab">Leavecancelhistorytab</div> */}
       <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
     </div>
   );

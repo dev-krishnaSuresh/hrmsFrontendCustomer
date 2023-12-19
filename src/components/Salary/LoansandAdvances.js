@@ -3,7 +3,7 @@ import React from "react";
 function LoansandAdvances() {
   return (
     <div>
-      <h4>LoansandAdvances</h4>
+      <h3>LoansandAdvances</h3>
     </div>
   );
 }

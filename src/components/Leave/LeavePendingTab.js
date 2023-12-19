@@ -54,7 +54,7 @@ function LeavePendingTab() {
   const items = [
     {
       key: "1",
-      label: "Info",
+      label: "LeavePending",
       children: <Table dataSource={dataSource} columns={columns} />,
     },
   ];
@@ -64,7 +64,7 @@ function LeavePendingTab() {
   };
   return (
     <div>
-      <div className="LeavePendingTab">LeavePending</div>
+      {/* <div className="LeavePendingTab"></div> */}
       <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
     </div>
   );

@@ -54,7 +54,7 @@ function Pendingleavecanceltab() {
   const items = [
     {
       key: "1",
-      label: "Info",
+      label: "Pendingleavecancel",
       children: <Table dataSource={dataSource} columns={columns} />,
     },
   ];
@@ -64,7 +64,7 @@ function Pendingleavecanceltab() {
   };
   return (
     <div>
-      <div className="Pendingleavecanceltab">Pendingleavecanceltab</div>;
+      {/* <div className="Pendingleavecanceltab">Pendingleavecanceltab</div>; */}
       <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
     </div>
   );

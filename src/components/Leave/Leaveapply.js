@@ -74,7 +74,7 @@ function Leaveapply() {
   console.log("size", size);
   return (
     <div>
-      <h4>Leaveapply</h4>
+      <h3>Leaveapply</h3>
       <div className="leaveinfo">
         <Radio.Group value={size} onChange={(e) => setSize(e.target.value)}>
           <Radio.Button

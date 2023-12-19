@@ -3,7 +3,7 @@ import React from "react";
 function ITDeclaration() {
   return (
     <div>
-      <h4>ITDeclaration</h4>
+      <h3>ITDeclaration</h3>
     </div>
   );
 }

@@ -190,9 +190,8 @@
   justify-content: right;
   align-items: center;
   background-image: url("/assets/images/loginimage.jpg");
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
-
 }
 
 .leftColumn {
@@ -350,4 +349,10 @@
   justify-content: start;
   background-color: lightgray;
   padding: 10px;
+}
+.applybtn {
+  width: 20%;
+}
+.dezoitos {
+  color: #9e9e9e;
 }

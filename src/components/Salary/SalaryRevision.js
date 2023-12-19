@@ -3,7 +3,7 @@ import React from "react";
 function SalaryRevision() {
   return (
     <div>
-      <h4>SalaryRevision</h4>
+      <h3>SalaryRevision</h3>
     </div>
   );
 }

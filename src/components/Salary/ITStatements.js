@@ -4,7 +4,7 @@ import { Card, Col, Row } from "antd";
 function ITStatements() {
   return (
     <div className="itinfo">
-      <h4>ITStatements</h4>
+      <h3>ITStatements</h3>
       <Row gutter={(16, 16)}>
         <Col span={4}>
           <Card

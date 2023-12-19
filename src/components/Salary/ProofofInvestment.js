@@ -3,7 +3,7 @@ import React from "react";
 function ProofofInvestment() {
   return (
     <div>
-      <h4>ProofofInvestment</h4>
+      <h3>ProofofInvestment</h3>
     </div>
   );
 }

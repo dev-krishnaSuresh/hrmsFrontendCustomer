@@ -1,7 +1,7 @@
 import React from "react";
 
 function WorkflowDelegates() {
-  return <h4>Workflow Delegates</h4>;
+  return <h3>Workflow Delegates</h3>;
 }
 
 export default WorkflowDelegates;

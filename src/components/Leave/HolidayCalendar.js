@@ -9,7 +9,7 @@ function HolidayCalendar() {
   );
   return (
     <div>
-      <h4>HolidayCalendar</h4>
+      <h3>HolidayCalendar</h3>
       <div className="holidays">
         <div className="yearlyholidays">
           <DemoBox value={100}>JAN</DemoBox>

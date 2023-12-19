@@ -9,26 +9,26 @@ function LeaveBalances() {
   );
   return (
     <div>
-      <h4>LeaveBalances</h4>
+      <h3>LeaveBalances</h3>
       <div className="leavebalances">
         <div className="leaveinfo">
           <DemoBox value={100}>
-            <h5>Loss of Pay</h5>
+            <h4>Loss of Pay</h4>
           </DemoBox>
         </div>
         <div className="leaveinfo">
           <DemoBox value={100}>
-            <h5>Casual Leave</h5>
+            <h4>Casual Leave</h4>
           </DemoBox>
         </div>
         <div className="leaveinfo">
           <DemoBox value={100}>
-            <h5>Privilege Leave</h5>
+            <h4>Privilege Leave</h4>
           </DemoBox>
         </div>
         <div className="leaveinfo">
           <DemoBox value={100}>
-            <h5>Sick Leave</h5>
+            <h4>Sick Leave</h4>
           </DemoBox>
         </div>
       </div>

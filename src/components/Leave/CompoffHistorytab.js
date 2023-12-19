@@ -54,7 +54,7 @@ function CompoffHistorytab() {
   const items = [
     {
       key: "1",
-      label: "Info",
+      label: "CompoffHistory",
       children: <Table dataSource={dataSource} columns={columns} />,
     },
   ];
@@ -64,7 +64,7 @@ function CompoffHistorytab() {
   };
   return (
     <div>
-      <div className="CompoffHistory">CompoffHistorytab</div>
+      {/* <div className="CompoffHistory">CompoffHistorytab</div> */}
       <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
     </div>
   );

@@ -54,7 +54,7 @@ function Restrictedholidayshistory() {
   const items = [
     {
       key: "1",
-      label: "Info",
+      label: "Restrictedholidayshistory",
       children: <Table dataSource={dataSource} columns={columns} />,
     },
   ];
@@ -65,7 +65,7 @@ function Restrictedholidayshistory() {
   return (
     <div>
       {" "}
-      <div className="Restrictedholidayshistory">Restrictedholidayshistory</div>
+      {/* <div className="Restrictedholidayshistory">Restrictedholidayshistory</div> */}
       <Collapse items={items} defaultActiveKey={["1"]} onChange={onChange} />
     </div>
   );

@@ -1,7 +1,7 @@
 import React from "react";
 
 function Helpdesk() {
-  return <h4>Helpdesk</h4>;
+  return <h3>Helpdesk</h3>;
 }
 
 export default Helpdesk;

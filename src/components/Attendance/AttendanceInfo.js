@@ -21,7 +21,7 @@ function AttendanceInfo() {
   );
   return (
     <div>
-      <h4>AttendanceInfo</h4>
+      <h3>AttendanceInfo</h3>
       <div className="workerstimeduration">
         <div className="timeduration">
           <DemoBox value={90}>AVG.WORK HRS</DemoBox>
@@ -34,7 +34,7 @@ function AttendanceInfo() {
         </div>
       </div>
       <div>
-        <h4>LeaveCalendar</h4>
+        <h3>LeaveCalendar</h3>
         <Calendar
           dateCellRender={dateCellRender}
           fullscreen={false} // Set to true for a full-screen calendar

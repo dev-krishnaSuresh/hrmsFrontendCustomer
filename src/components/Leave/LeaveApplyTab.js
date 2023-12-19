@@ -56,6 +56,7 @@ function LeaveApplyTab() {
           </Dropdown>
         </div>
       </div>
+      <Button className="applybtn">Apply</Button>
     </div>
   );
 }
