@@ -77,12 +77,12 @@ const items = [
     children: [
       { key: "salary/paysilps", label: "Paysilps" },
       { key: "salary/ytdreports", label: "YTD Reports" },
-      { key: "salary/itstatements", label: "IT Statements" },
-      { key: "salary/itdeclaraton", label: "IT Declaration" },
-      { key: "salary/loansandadvances", label: "Loans and Advances" },
-      { key: "salary/reimbursement", label: "Reimbursement" },
-      { key: "salary/proofofinvestment", label: "Proof of Investment" },
-      { key: "salary/salaryrevision", label: "Salary Revision" },
+      // { key: "salary/itstatements", label: "IT Statements" },
+      // { key: "salary/itdeclaraton", label: "IT Declaration" },
+      // { key: "salary/loansandadvances", label: "Loans and Advances" },
+      // { key: "salary/reimbursement", label: "Reimbursement" },
+      // { key: "salary/proofofinvestment", label: "Proof of Investment" },
+      // { key: "salary/salaryrevision", label: "Salary Revision" },
     ],
   },
   {
@@ -285,6 +285,7 @@ const App = () => {
           </Sider>
           <Content
             style={{
+              // backgroundImage: "url(/assets/images/loginimage.jpg)",
               padding: "0 24px",
               minHeight: 280,
             }}
