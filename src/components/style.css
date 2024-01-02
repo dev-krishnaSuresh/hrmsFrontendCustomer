@@ -255,7 +255,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 60vh;
+  min-height: 60vh;
+  width: 80%;
+  /* align-items: start; */
 }
 .typeofleave {
   width: 200px;
@@ -355,4 +357,9 @@
 }
 .dezoitos {
   color: #9e9e9e;
+}
+.applyLeaveButtons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

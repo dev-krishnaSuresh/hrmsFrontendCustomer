@@ -204,7 +204,7 @@ const App = () => {
           display: "flex",
           backgroundColor: "#000",
           alignItems: "center",
-          marginTop: 10,
+          // marginTop: 10,
           height: 120,
         }}
       >

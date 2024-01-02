@@ -101,7 +101,7 @@ function Leaveapply() {
         defaultActiveKey="1"
         tabPosition={"left"}
         style={{
-          height: 500,
+          minHeight: 500,
         }}
         items={items}
       />
