@@ -4,8 +4,8 @@ import Cookies from "js-cookie";
 // Create an Axios instance with a common base URL
 const token = Cookies.get("userToken");
 const api = axios.create({
-  baseURL: "https://hrms-strapi.onrender.com/api",
-  // baseURL: "http://localhost:1337/api",
+  // baseURL: "https://hrms-strapi.onrender.com/api",
+  baseURL: "http://localhost:1337/api",
 });
 
 api.interceptors.request.use(

@@ -135,7 +135,11 @@ const LeaveForm = ({ onSubmit, form, isloading }) => {
           <Option value="Session 2">Session 2</Option>
         </Select>
       </Form.Item>
-      <Form.Item label="Number of Days" name="daysOfLeave">
+      <Form.Item
+        label="Number of Days"
+        name="daysOfLeave"
+        rules={[{ required: true, message: "Please select To session!" }, {}]}
+      >
         <Input value={daysOfLeave} disabled />
       </Form.Item>
       <Form.Item

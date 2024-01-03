@@ -198,38 +198,15 @@ const App = () => {
   return location.pathname == "/" ? (
     <Login />
   ) : (
-    <Layout>
-      <Header
-        style={{
-          display: "flex",
-          backgroundColor: "#000",
-          alignItems: "center",
-          // marginTop: 10,
-          height: 120,
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
+    <Layout className="layoutStyles">
+      <Header className="layoutHeader">
+        <div className="layoutHeaderDiv">
           <span>
             {/* <img src={HomeLogo} alt="logo" srcset="" width={100} height={100} /> */}
             <h1 className="dezoitos">DEZOITO</h1>
           </span>
 
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              width: "5%",
-              justifyContent: "space-between",
-              color: "white",
-            }}
-          >
+          <div className="layoutHeaderInnerDiv">
             {/* <span>
               <Select
                 defaultValue="quicklinks"
@@ -245,29 +222,18 @@ const App = () => {
               />
             </span> */}
             <span>
-              <BellOutlined />
+              <BellOutlined className="headerIcons" />
             </span>
             <span className="poweroff" onClick={handlelogout}>
-              <PoweroffOutlined />
+              <PoweroffOutlined className="headerIcons" />
             </span>
           </div>
         </div>
       </Header>
-      <Content
-        style={{
-          padding: "0 50px",
-          backgroundColor: "black",
-        }}
-      >
-        <Layout
-          style={{
-            padding: "24px 0",
-            background: colorBgContainer,
-          }}
-        >
+      <Content className="outerLayoutContent">
+        <Layout className="innerLayoutContent">
           <Sider
             style={{
-              background: colorBgContainer,
               textAlign: "left",
             }}
             width={200}
@@ -283,23 +249,12 @@ const App = () => {
               items={items}
             />
           </Sider>
-          <Content
-            style={{
-              // backgroundImage: "url(/assets/images/loginimage.jpg)",
-              padding: "0 24px",
-              minHeight: 280,
-            }}
-          >
+          <Content className="layoutContent">
             <div className="content">{contentRender()}</div>
           </Content>
         </Layout>
       </Content>
-      <Footer
-        style={{
-          textAlign: "center",
-          backgroundColor: "black",
-        }}
-      ></Footer>
+      <Footer className="layoutFooter"></Footer>
     </Layout>
   );
 };
