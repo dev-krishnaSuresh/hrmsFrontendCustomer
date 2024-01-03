@@ -112,6 +112,7 @@ function Restrictedholidaysapplytab() {
   // };
   return (
     <div>
+      <h2>Restricted Holidays Form</h2>
       {/* <div className="Restrictedholidays"> */}
       {/* Restricted holidays are the holidays for which the employees have option */}
       {/* to choose whether or not to take leave. */}

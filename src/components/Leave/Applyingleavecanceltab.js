@@ -112,6 +112,7 @@ function Applyingleavecanceltab() {
   // };
   return (
     <div>
+      <h2>Leave Cancellation Form</h2>
       {/* <div className=" LeaveCancel">
         Leave Cancel enables you to apply for cancellation of approved leave
         applications. Please select a leave type to get started.
