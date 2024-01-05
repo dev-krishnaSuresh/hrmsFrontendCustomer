@@ -33,13 +33,13 @@ function AttendanceInfo() {
           <DemoBox value={90}>PENALTY DAYS</DemoBox>
         </div>
       </div>
-      <div>
+      {/* <div>
         <h3>LeaveCalendar</h3>
         <Calendar
           dateCellRender={dateCellRender}
           fullscreen={false} // Set to true for a full-screen calendar
         />
-      </div>
+      </div> */}
     </div>
   );
 }

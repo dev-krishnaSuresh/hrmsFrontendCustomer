@@ -114,6 +114,10 @@ function LeavePendingTab() {
       {expanded ? <UpOutlined /> : <DownOutlined />}
     </span>
   );
+  // const expandableRowsCondition = (record) => {
+  //   // Example: Allow rows to be expandable only if the leave type is "Sick Leave"
+  //   return record.leaveType === "SL";
+  // };
   return (
     <div>
       {/* <div className="LeavePendingTab"></div> */}
@@ -131,7 +135,8 @@ function LeavePendingTab() {
             </p>
           ),
           expandIcon,
-          // rowExpandable: (record) => record.name !== 'Not Expandable',
+          // rowExpandable: expandableRowsCondition,
+          // rowExpandable: (record) => record.name !== "Not Expandable",
         }}
       />
     </div>
