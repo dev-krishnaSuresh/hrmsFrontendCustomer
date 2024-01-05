@@ -24,13 +24,22 @@ function AttendanceInfo() {
       <h3>AttendanceInfo</h3>
       <div className="workerstimeduration">
         <div className="timeduration">
-          <DemoBox value={90}>AVG.WORK HRS</DemoBox>
+          <DemoBox value={90}>
+            AVG.WORK HRS
+            <hr />0
+          </DemoBox>
         </div>
         <div className="timeduration">
-          <DemoBox value={90}>AVG.ACTUAL WORK HRS</DemoBox>
+          <DemoBox value={90}>
+            AVG.ACTUAL WORK HRS
+            <hr />0
+          </DemoBox>
         </div>
         <div className="timeduration">
-          <DemoBox value={90}>PENALTY DAYS</DemoBox>
+          <DemoBox value={90}>
+            PENALTY DAYS
+            <hr />0
+          </DemoBox>
         </div>
       </div>
       {/* <div>

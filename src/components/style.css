@@ -89,7 +89,7 @@
 .homeContent > div {
 }
 .homeContent {
-  display: grid;
+  display: flex;
   grid-template-areas:
     "review review time time holidays holidays"
     "review review time time holidays holidays"
@@ -363,52 +363,50 @@
   justify-content: space-between;
   align-items: center;
 }
-.layoutStyles{
+.layoutStyles {
   /* background-color: #000!important; */
   min-height: 100vh;
   background-image: url("/assets/gif/snowfalling.gif");
   display: flex;
   /* align-items: center; */
   min-width: 100vw;
-
 }
-.layoutContent{
+.layoutContent {
   padding: 0 24px;
   min-height: 280;
 }
-.outerLayoutContent{
+.outerLayoutContent {
   padding: 0 50px;
   /* background-color: black; */
 }
-.layoutFooter{
+.layoutFooter {
   background-color: transparent;
   text-align: center;
 }
-.layoutHeader{
+.layoutHeader {
   display: flex;
   align-items: center;
   /* margin-top: 40px; */
   height: 120px;
   background-color: transparent;
 }
-.layoutHeaderDiv{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.layoutHeaderDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .layoutHeaderInnerDiv {
-    display: flex;
-    align-items: center;
-    width: 10%;
-    justify-content: space-between;
-    color: #9e9e9e; 
+  display: flex;
+  align-items: center;
+  width: 10%;
+  justify-content: space-between;
+  color: #9e9e9e;
 }
 .innerLayoutContent {
-    padding: 24px 0;
-    background-color: #fff;
-    opacity: 0.9;
-
+  padding: 24px 0;
+  background-color: #fff;
+  opacity: 0.9;
 }
 .headerIcons {
   font-size: 20px;

@@ -81,12 +81,12 @@ function Home() {
   return (
     <>
       <div className="homeContent">
-        <div className="review">
+        {/* <div className="review">
           <DemoBox value={100}>
             <FormOutlined />
             <h3>Review</h3>
           </DemoBox>
-        </div>
+        </div> */}
         <div className="time">
           <div className="sign-in-container">
             <DemoBox value={100}>
@@ -101,11 +101,11 @@ function Home() {
             </DemoBox>
           </div>
         </div>
-        <div className="holidays">
+        {/* <div className="holidays">
           <DemoBox value={200}>
             <h3>Upcoming Holidays</h3>
           </DemoBox>
-        </div>
+        </div> */}
         <div className="quickAccess">
           <DemoBox value={100}>
             <h3>Quick Access</h3>
@@ -116,7 +116,7 @@ function Home() {
             <Payslip />
           </DemoBox>
         </div>
-        <div className="itDeclaration">
+        {/* <div className="itDeclaration">
           <DemoBox value={100}>
             <h3>IT Declaration</h3>
             <Button className="itdeclare">Declare</Button>
@@ -127,7 +127,7 @@ function Home() {
             <h3>Track</h3>
             <p>All good!You've nothing new to track.</p>
           </DemoBox>
-        </div>
+        </div> */}
         <div className="poi">
           <DemoBox value={80}>
             <h3>POI</h3>
